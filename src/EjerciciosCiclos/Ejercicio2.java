@@ -7,30 +7,31 @@ public class Ejercicio2 {
     public static Logger log =
             Logger.getLogger(Ejercicio2.class.getName());
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         String userCorrecto = "admin";
         String user;
-        String contraseñaCorrecta = "ciclos";
-        String contraseña;
+        String passwordCorrecta = "ciclos";
+        String password;
         int intentos = 0;
-        boolean usuario = false;
+        boolean verificacion = false;
 
-        while (intentos < 3 && !usuario) {
+        while (intentos < 3 && !verificacion) {
             intentos++;
             log.info("Ingrese su usuario");
             user = sc.next();
             log.info("Ingrese su contraseña");
-            contraseña = sc.next();
+            password = sc.next();
 
-            if (user.equals(userCorrecto) && contraseña.equals(contraseñaCorrecta)) {
+            if (user.equals(userCorrecto) && password.equals(passwordCorrecta)) {
                 usuario = true;
                 log.info("Has ingresado correctamente");
             } else {
                 log.info("Las credenciales no son correctas, intente de nuevo");
             }
-        }if (!usuario) {
+        }
+        if (!verificacion) {
             log.warning("Has alcanzado tu máximo número de intentos");
             log.severe("Su cuenta ha sido bloqueada");
         }
