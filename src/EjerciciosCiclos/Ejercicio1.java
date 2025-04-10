@@ -1,8 +1,11 @@
 package EjerciciosCiclos;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Ejercicio1 {
+    public static Logger log =
+            Logger.getLogger(Ejercicio1.class.getName());
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -11,13 +14,14 @@ public class Ejercicio1 {
         int respuesta;
         // System.out.println(numRandom);  <-- testeo de rng para verificar
 
-        System.out.println("Adivina el número del 1 al 10");
+        log.info("Adivina el número del 1 al 10");
         do{
             respuesta = sc.nextInt();
             if (respuesta != numRandom){
-            System.out.println("Incorrecto, inténtelo de nuevo");}
+            log.info("Incorrecto, inténtelo de nuevo");}
         }while(respuesta != numRandom);
-        System.out.println("¡Has adivinado el número!");
-        System.out.println("El número es " + numRandom);
+
+        log.info("¡Has adivinado el número!");
+        log.info("El número es " + numRandom);
     }
 }
