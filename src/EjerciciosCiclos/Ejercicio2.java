@@ -25,7 +25,7 @@ public class Ejercicio2 {
             password = sc.next();
 
             if (user.equals(userCorrecto) && password.equals(passwordCorrecta)) {
-                usuario = true;
+                verificacion = true;
                 log.info("Has ingresado correctamente");
             } else {
                 log.info("Las credenciales no son correctas, intente de nuevo");
