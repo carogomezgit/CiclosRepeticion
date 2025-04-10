@@ -6,8 +6,8 @@ import java.util.logging.Logger;
 public class Ejercicio2 {
     public static Logger log =
             Logger.getLogger(Ejercicio2.class.getName());
-
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
 
         String userCorrecto = "admin";
@@ -28,7 +28,7 @@ public class Ejercicio2 {
                 usuario = true;
                 log.info("Has ingresado correctamente");
             } else {
-                log.info("Las credenciales no son correctas");
+                log.info("Las credenciales no son correctas, intente de nuevo");
             }
         }if (!usuario) {
             log.warning("Has alcanzado tu máximo número de intentos");
